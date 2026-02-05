@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hruthik Prabhu — Frontend Developer</title>
+
+  <!-- Modern system font stack for a professional look -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Theme preference for initial paint -->
+  <script>
+    // Apply saved theme (or respect OS preference) before CSS paints to avoid flash
+    (function() {
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Sticky header + navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to home">Hruthik Prabhu</a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme" title="Toggle theme">🌓</button>
+
+        <!-- Mobile nav toggle -->
+        <button id="mobile-nav-toggle" class="btn-icon mobile-only" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile nav (hidden on desktop) -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container" tabindex="-1">
+      <div class="hero-content">
+        <h1 class="hero-title">Hruthik Prabhu</h1>
+        <p class="hero-role">Senior Frontend Developer</p>
+        <p class="hero-summary">
+          Crafting clean, accessible user interfaces with semantic HTML, modern CSS, and vanilla JavaScript.<br>
+          Focused on performance, responsive design, and polished UX.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Profile photo -->
+      <figure class="hero-visual">
+        <img src="hruthik.jpg" alt="Photo of Hruthik Prabhu" width="480" height="270">
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container section">
+      <h2>About Me</h2>
+      <p>
+        "I am a BCA student and an aspiring Full-Stack Developer with a deep interest in how modern web tech intersects with AI. While my foundation is built on HTML, CSS, and JavaScript, I specialize in leveraging Python and Prompt Engineering to build smarter, more efficient applications.
+
+With a growing knowledge of Cloud computing, I focus on building scalable web solutions that aren't just functional, but also optimized for the future. I’m currently looking for opportunities to apply my technical stack to real-world projects and grow within a collaborative dev team."
+      </p>
+      <p>
+        Currently learning advanced performance optimization, Web Components, and progressive enhancement strategies.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills container section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Python, Prompt Engineering</li>
+            <li>Cloud: AWS/Google Cloud Basics, Deployment</li>
+            <li>VS Code, Chrome DevTools, Python Virtual Environments </li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <ul>
+            <li>Responsive UI, Mobile-First Design</li>
+            <li>Scripting, AI Workflow Optimization</li>
+            <li>cloud security</li>
+            <li>Figma (basic)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Concepts</h3>
+          <ul>
+            <li>Progressive Enhancement</li>
+            <li>Performance Optimization</li>
+            <li>Accessibility (a11y)</li>
+            <li>Component Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="education container section">
+      <h2>Education</h2>
+      <div class="education-list">
+        <article class="edu-item">
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p class="muted">University Name / College Name — 2023 – 2026</p>
+          <ul>
+            <li>CGPA: 8.23/10</li>
+            <li>Core coursework: Data Structures, DBMS, Operating Systems, Computer Networks, Software Engineering, Web Development.</li>
+            <li>Highlights: Built small web utilities with HTML, CSS, JS; practiced SQL and basic data analysis.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <!-- Project: basic-calculator- -->
+        <article class="project-card fade-in">
+          <figure class="project-image">
+            <a href="https://github.com/hruthikprabhu/basic-calculator-" target="_blank" rel="noopener noreferrer">
+              <img src="https://opengraph.githubassets.com/1/hruthikprabhu/basic-calculator-" alt="basic-calculator- repository preview" width="640" height="360">
+            </a>
+          </figure>
+                    <div class="project-body">
+            <h3><a href="https://github.com/hruthikprabhu/basic-calculator-" target="_blank" rel="noopener noreferrer">basic-calculator-</a></h3>
+            <p>Basic calculator implementing arithmetic operations.</p>
+            <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/hruthikprabhu/basic-calculator-" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: internship-kle -->
+        <article class="project-card fade-in">
+          <figure class="project-image">
+            <a href="https://github.com/hruthikprabhu/internship-kle" target="_blank" rel="noopener noreferrer">
+              <img src="https://opengraph.githubassets.com/1/hruthikprabhu/internship-kle" alt="Basic Website repository preview" width="640" height="360">
+            </a>
+          </figure>
+          <div class="project-body">
+            <h3><a href="https://github.com/hruthikprabhu/internship-kle" target="_blank" rel="noopener noreferrer">Basic Website</a></h3>
+            <p>A basic website built with HTML, CSS, and JS.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/hruthikprabhu/internship-kle" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+                        <article class="project-card fade-in">
+          <figure class="project-image">
+            <a href="https://github.com/hruthikprabhu/ecommerce-website" target="_blank" rel="noopener noreferrer">
+              <img src="https://opengraph.githubassets.com/1/hruthikprabhu/ecommerce-website" alt="E-commerce Website repository preview" width="640" height="360">
+            </a>
+          </figure>
+          <div class="project-body">
+          <h3><a href="https://github.com/hruthikprabhu/ecommerce-website" target="_blank" rel="noopener noreferrer">E-commerce Website</a></h3>
+          <p>A simple storefront with product listing, cart interactions, and responsive design.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <div class="project-links">
+          <a href="https://github.com/hruthikprabhu/ecommerce-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="experience container section">
+      <h2>Experience & Education</h2>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <time datetime="2023">2026 — Present</time>
+          <div>
+            <h3>Frontend Developer — Freelance / Personal Projects</h3>
+            <p>Building responsive UIs and component-driven layouts with semantic HTML, modern CSS, and JavaScript. Focus on accessibility and performance.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <time datetime="2023">2026 — Present</time>
+          <div>
+            <h3>Prompt Engineering — Practical Experience</h3>
+            <p>Designed and iterated prompts to automate tasks, create structured outputs, and integrate LLMs into web workflows. Emphasis on reliability, context control, and evaluation.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <time datetime="2026">2026 — Present</time>
+          <div>
+            <h3>Certisured — Certificate Program (Currently Studying)</h3>
+            <p>Actively pursuing certification covering modern web development foundations, cloud basics, and AI-assisted development practices.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <time datetime="2021">2023 — 2026</time>
+          <div>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Coursework: Data Structures, DBMS, OS, Networks, Software Engineering, Web Development.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact container section">
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <div>
+          <p>Email: <a href="mailto:hruthikprabhu90@gmail.com" target="_blank" rel="noopener noreferrer">hruthikprabhu90@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+          <p>GitHub: <a href="https://github.com/hruthikprabhu" target="_blank" rel="noopener noreferrer">github.com/hruthikprabhu</a></p>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required aria-required="true" />
+            <small class="error" id="name-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required aria-required="true" />
+            <small class="error" id="email-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+            <small class="error" id="message-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-row form-actions">
+            <button type="submit" class="btn">Send Message</button>
+            <div id="form-feedback" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Hruthik Prabhu — Built with semantic HTML, modern CSS, and vanilla JS.</p>
+    </div>
+  </footer>
+
+  <!-- Main script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
